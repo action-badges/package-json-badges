@@ -72,7 +72,7 @@ class PackageJsonNodeVersion extends BaseAction {
   async render() {
     const packageJson = await this.validate(await this.fetch());
     return {
-      message: packageJson.engines.node,
+      message: packageJson.engines.node.replace(/\s/g, ""),
       messageColor: "blue",
     };
   }

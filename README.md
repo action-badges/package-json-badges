@@ -20,27 +20,32 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v3
+      - uses: action-badges/create-orphan-branch@0.1.0
+        with:
+          branch-name: badges
 
       - name: Make version Badge
-        uses: action-badges/package-json-badges@0.2.2
+        uses: action-badges/package-json-badges@0.2.3
         with:
           file-name: package-version.svg
+          badge-branch: badges
           github-token: '${{ secrets.GITHUB_TOKEN }}'
           integration: version
 
       - name: Make license badge
-        uses: action-badges/package-json-badges@0.2.2
+        uses: action-badges/package-json-badges@0.2.3
         with:
           file-name: package-license.svg
+          badge-branch: badges
           github-token: '${{ secrets.GITHUB_TOKEN }}'
           integration: license
 
       - name: Make node version badge
-        uses: action-badges/package-json-badges@0.2.2
+        uses: action-badges/package-json-badges@0.2.3
         with:
           file-name: package-node-version.svg
+          badge-branch: badges
           github-token: '${{ secrets.GITHUB_TOKEN }}'
           integration: node-version
 ```

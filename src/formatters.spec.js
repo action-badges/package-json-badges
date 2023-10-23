@@ -35,7 +35,7 @@ describe("semverVersionColor", function () {
       assert.strictEqual(
         semverVersionColor(testCase[0]),
         testCase[1],
-        testCase[0] //message
+        testCase[0], //message
       );
     }
   });
