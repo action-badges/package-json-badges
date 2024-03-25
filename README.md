@@ -26,7 +26,7 @@ jobs:
           branch-name: badges
 
       - name: Make version Badge
-        uses: action-badges/package-json-badges@0.3.0
+        uses: action-badges/package-json-badges@0.3.1
         with:
           file-name: package-version.svg
           badge-branch: badges
@@ -34,7 +34,7 @@ jobs:
           integration: version
 
       - name: Make license badge
-        uses: action-badges/package-json-badges@0.3.0
+        uses: action-badges/package-json-badges@0.3.1
         with:
           file-name: package-license.svg
           badge-branch: badges
@@ -42,7 +42,7 @@ jobs:
           integration: license
 
       - name: Make node version badge
-        uses: action-badges/package-json-badges@0.3.0
+        uses: action-badges/package-json-badges@0.3.1
         with:
           file-name: package-node-version.svg
           badge-branch: badges
