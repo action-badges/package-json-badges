@@ -9,7 +9,7 @@
     "prettier": "prettier --write \"**/*.{js,cjs}\"",
     "prettier:check": "prettier --check \"**/*.{js,cjs}\"",
     "test": "node --test --experimental-test-coverage",
-    "coverage": "node --test --experimental-test-coverage --test-reporter junit --test-reporter-destination=coverage.xml"
+    "coverage": "rm -rf ./coverage && mkdir coverage && node --test --experimental-test-coverage --test-reporter cobertura --test-reporter-destination=./coverage/cobertura-coverage.xml"
   },
   "repository": {
     "type": "git",
@@ -25,6 +25,7 @@
   },
   "devDependencies": {
     "@vercel/ncc": "^0.38.2",
+    "cobertura": "^1.0.2",
     "eslint": "^9.14.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-mocha": "^10.5.0",
