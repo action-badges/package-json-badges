@@ -19,7 +19,7 @@
   "author": "chris48s",
   "license": "MIT",
   "dependencies": {
-    "@action-badges/core": "^0.3.1",
+    "@action-badges/core": "^0.4.0",
     "@actions/core": "^1.11.1",
     "semver": "^7.7.2"
   },
@@ -34,7 +34,7 @@
     "prettier": "^3.6.2"
   },
   "engines": {
-    "node": ">= 20"
+    "node": ">=24"
   },
   "type": "module"
 }
