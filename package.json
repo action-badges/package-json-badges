@@ -21,7 +21,7 @@
   "dependencies": {
     "@action-badges/core": "^0.4.0",
     "@actions/core": "^1.11.1",
-    "semver": "^7.7.2"
+    "semver": "^7.7.3"
   },
   "devDependencies": {
     "@vercel/ncc": "^0.38.4",
