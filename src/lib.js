@@ -1,5 +1,5 @@
 import { promises as fs } from "fs";
-import core from "@actions/core";
+import * as core from "@actions/core";
 import { BaseAction } from "@action-badges/core";
 import { addv, semverVersionColor } from "./formatters.js";
 
