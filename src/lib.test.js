@@ -1,4 +1,5 @@
-import assert from "assert";
+import assert from "node:assert";
+import { describe, it, afterEach } from "node:test";
 import {
   PackageJsonLicense,
   PackageJsonNodeVersion,
@@ -89,6 +90,7 @@ describe("PackageJsonNodeVersion", function () {
 describe("getAction", function () {
   afterEach(function () {
     delete process.env["INPUT_INTEGRATION"];
+    process.exitCode = undefined;
   });
 
   it("Returns the correct action class with expected inputs", function () {
